@@ -24,12 +24,14 @@ public class FindTheTopKMostFrequentElements {
 				hm.put(ch, 1);
 			}
 		}
-//Calls sortByValue(hm): a method that returns a LinkedHashMap sorted by value in descending order
+//Calls sortByValue(hm): a method that returns a
+//LinkedHashMap sorted by value in descending order
 		System.out.println(hm); 
 		Map<Character,Integer> result = new LinkedHashMap<Character, Integer>(sortByValue(hm));
 		System.out.println(result);
 		for(char ch : result.keySet()) { 
-//Iterates over the keys (characters) of the result map.Since the map is sorted by frequency, the first key is the most frequent character.
+//Iterates over the keys (characters) of the result map.
+//Since the map is sorted by frequency, the first key is the most frequent character.
 			System.out.println("Most frequent character is: " +ch +" and number of frequecny is:" +result.get(ch));
 //ensures only the first entry is printed, then exits the loop.
 			break; 

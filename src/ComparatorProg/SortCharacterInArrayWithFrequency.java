@@ -15,7 +15,8 @@ public class SortCharacterInArrayWithFrequency {
 
 		String s1 = "treeetrrrr"; // rrrrreeett
 		char s2[] = s1.toCharArray();
-//I use a HashMap to count how many times each character appears. If a character is already in the map, I increment the count; otherwise, I add it with count 1.
+//I use a HashMap to count how many times each character appears. 
+//If a character is already in the map, I increment the count; otherwise, I add it with count 1.
 		HashMap<Character,Integer> hm = new HashMap<>();
 		for(Character ch : s2) {
 			if(hm.containsKey(ch)) {
@@ -26,20 +27,24 @@ public class SortCharacterInArrayWithFrequency {
 			}
 		}
 		
-//		TreeMap<Character, Integer> tm = new TreeMap<Character, Integer>(hm);
-//		System.out.println(tm); //with key sorting
+//	TreeMap<Character, Integer> tm = new TreeMap<Character, Integer>(hm);
+//System.out.println(tm); //with key sorting
 		
-		//Since HashMap doesn't maintain order, I create a helper method sortByValue() which:
+//Since HashMap doesn't maintain order, I create a helper method sortByValue() which:
 		
 		HashMap<Character, Integer> sortedMap = sortByValue(hm);
 		System.out.println(hm);
 		System.out.println(sortedMap);
 		
 		String result = "";
-//After sorting, I iterate over the map and construct a new string by appending each character n times (based on its frequency).The characters are sorted by frequency: r (5), e (3), t (2)
-		for (char key : sortedMap.keySet()) { //returns a set of characters that were stored as keys in the LinkedHashMap.This loop goes through each character (key) one by one.
-			int val = sortedMap.get(key); //For each character (key), sortedMap.get(key) returns its frequency count.
-											//First iteration: key = 'r', val = 5
+//After sorting, I iterate over the map and construct a new 
+//string by appending each character n times (based on its frequency).
+//The characters are sorted by frequency: r (5), e (3), t (2)
+		for (char key : sortedMap.keySet()) { 
+//returns a set of characters that were stored as keys in the LinkedHashMap.This loop goes through each character (key) one by one.
+			int val = sortedMap.get(key); 
+//For each character (key), sortedMap.get(key) returns its frequency count.
+//First iteration: key = 'r', val = 5
 			for (int i=0 ; i<val ; i++) {
 				result = result + key; //So the final result string becomes: "rrrrreeett"
 			}
@@ -53,7 +58,8 @@ public class SortCharacterInArrayWithFrequency {
 	public static HashMap<Character,Integer> sortByValue(HashMap<Character,Integer> hm1)
 	{
 		List<Map.Entry<Character,Integer>> list = new LinkedList<Map.Entry<Character,Integer>>(hm1.entrySet());
-//Extract all key-value pairs from the original HashMap as a list...Map.Entry represents a key-value pair.We use a LinkedList to allow efficient sorting.
+//Extract all key-value pairs from the original HashMap as a list...
+//Map.Entry represents a key-value pair.We use a LinkedList to allow efficient sorting.
 		
 		Collections.sort(list, new Comparator<Map.Entry<Character, Integer> >(){
 //Sort the list using Collections.sort()...A custom comparator is used to sort by value in descending order..

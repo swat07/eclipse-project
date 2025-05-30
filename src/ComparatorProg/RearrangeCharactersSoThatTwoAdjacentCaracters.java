@@ -50,21 +50,23 @@ public class RearrangeCharactersSoThatTwoAdjacentCaracters {
 		}
 		return hm;
 	}
-	//This method sorts a HashMap<Character, Integer> by its values in descending order 
-		//(i.e., highest frequency first), and returns the result as a LinkedHashMap to maintain the sorted order.
+//This method sorts a HashMap<Character, Integer> by its values in descending order 
+//(i.e., highest frequency first), and returns the result as a LinkedHashMap to maintain the sorted order.
 		public static HashMap<Character,Integer> sortByValue(HashMap<Character,Integer> hm1)
 		{
 			List<Map.Entry<Character,Integer>> list = new LinkedList<Map.Entry<Character,Integer>>(hm1.entrySet());
-	//Extract all key-value pairs from the original HashMap as a list...Map.Entry represents a key-value pair.We use a LinkedList to allow efficient sorting.
+//Extract all key-value pairs from the original HashMap as a list...
+//Map.Entry represents a key-value pair.We use a LinkedList to allow efficient sorting.
 			
 			Collections.sort(list, new Comparator<Map.Entry<Character, Integer> >(){
-	//Sort the list using Collections.sort()...A custom comparator is used to sort by value in descending order..
-	//This is an anonymous class implementing Comparator to define custom sorting logic.
+//Sort the list using Collections.sort()...A custom comparator is used to sort by value in descending order..
+//This is an anonymous class implementing Comparator to define custom sorting logic.
 				public int compare (Map.Entry<Character, Integer> o1, Map.Entry<Character, Integer> o2) {
-					return (o2.getValue()).compareTo(o1.getValue());  //o2.getValue().compareTo(o1.getValue()) ensures higher frequency comes first.
+					return (o2.getValue()).compareTo(o1.getValue());  
+//o2.getValue().compareTo(o1.getValue()) ensures higher frequency comes first.
 				}
 			});
-	//We use a LinkedHashMap to store the sorted entries.LinkedHashMap maintains insertion order, so the final map keeps the sorted order.
+//We use a LinkedHashMap to store the sorted entries.LinkedHashMap maintains insertion order, so the final map keeps the sorted order.
 			HashMap<Character, Integer> temp = new LinkedHashMap<Character, Integer>();
 			for(Map.Entry<Character, Integer> aa : list) { //Iterate through the sorted list and populate the LinkedHashMap.
 				temp.put(aa.getKey(),aa.getValue());
