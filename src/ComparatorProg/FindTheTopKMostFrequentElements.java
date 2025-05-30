@@ -24,6 +24,15 @@ public class FindTheTopKMostFrequentElements {
 				hm.put(ch, 1);
 			}
 		}
+		
+		//########int count = 0;
+//		for (char ch : result.keySet()) {
+//		    System.out.println("Top " + (count + 1) + " frequent character: " + ch + " → frequency: " + result.get(ch));
+//		    count++;
+//		    if (count == 3) {
+//		        break;
+//		    }##########
+		
 //Calls sortByValue(hm): a method that returns a
 //LinkedHashMap sorted by value in descending order
 		System.out.println(hm); 
