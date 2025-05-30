@@ -1,4 +1,4 @@
-package Assignments;
+package ComparatorProg;
 
 import java.util.Collections;
 import java.util.Comparator;
