@@ -3,26 +3,15 @@ package JavaProgram;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class FindDuplicates {
+public class FindOnlyDuplicatesNum {
 
 	public static void main(String[] args) {
 		
 //		input = {4,5,8,4,5,5}
 //		outPut = {4,5}
+		
 		int a[] = {4,5,8,4,5,5};
-		
-////		HashSet<Integer> arrList = new HashSet<>();
-//		ArrayList<Integer> arrList = new ArrayList<>();
-//		
-//		for(int i=0; i<a.length; i++) {
-//			for(int j=i+1; j<a.length; j++) {
-//				if(a[i] == a[j] & !arrList.contains(a[i])) {
-//					arrList.add(a[i]);
-//				}
-//			}
-//		}
-//		System.out.println(arrList +" ");
-		
+	
 		HashSet<Integer> hs1 = new HashSet<>();
 		HashSet<Integer> hs2 = new HashSet<>();
 		for(int i=0; i<a.length; i++) {
@@ -34,8 +23,6 @@ public class FindDuplicates {
 			}
 		}
 		System.out.println("Duplicate values:" +hs2);
-		
-		
 		
 	}
 	
