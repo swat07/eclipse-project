@@ -5,7 +5,7 @@ public class Check_Prime_Numer {
 	public static void main(String[] args) {
 //		A prime number can only be divided by 1 and itself — it has no other factors.
 		
-		int num = 155;
+		int num = 29;
 		boolean isPrime = true;
 		
 		if(num <= 1) {
@@ -13,6 +13,7 @@ public class Check_Prime_Numer {
 		}
 		else {
 			for(int i=2; i<num; i++) {
+ //% is the modulus operator.If num % i == 0, then i is a factor of num.				
 				if(num%i == 0) {
 					isPrime = false; // Found a factor, not prime
 					break;  //No need to check further

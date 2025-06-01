@@ -2,21 +2,30 @@ package Assignments;
 
 public class ReverseStringPreservingSpacePositions {
 
-	public static void main(String[] args) {
-		//	Input: "internship at geeks for geeks"
-		//Output:   skeegrofsk ee gtapi hsn retni
-		
-		String s1 = "Swati Malviya";
-		char s2[] = s1.toCharArray();
-		char result[] = new char[s2.length];
-		
-		for(int i=0; i<s2.length; i++) {
-			if(s2[i] == ' ') {
-				result[i] = ' ';
-			}
-		}
-		
-		for(int j=0;)
-	}
+    public static void main(String[] args) {
+        String input = "Swati Malviya";
+        char[] inputArr = input.toCharArray();
+        char[] result = new char[inputArr.length];
 
+        // Mark space positions
+        for (int i = 0; i < inputArr.length; i++) {
+            if (inputArr[i] == ' ') {
+                result[i] = ' ';
+            }
+        }
+
+        // Reverse the characters (skip spaces)
+        int j = inputArr.length - 1;
+        for (int i = 0; i < inputArr.length; i++) {
+            if (inputArr[i] != ' ') {
+                while (result[j] == ' ') {
+                    j--;
+                }
+                result[j] = inputArr[i];
+                j--;
+            }
+        }
+
+        System.out.println(new String(result));  // Output: "aivlya itawS"
+    }
 }
