@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class StringPatternMatching {
 	
-	
 	public static ArrayList<String> findSubStrings(String source, String pattern){
 		
 		ArrayList<String> subStrings = new ArrayList<>();

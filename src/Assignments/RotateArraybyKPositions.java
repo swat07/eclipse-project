@@ -6,7 +6,7 @@ public class RotateArraybyKPositions {
 		
 		int a[] = {1,2,3,4,5,6,7};
         int temp[] = new int[a.length];
-        int k = 3;
+        int k = 1;
         int newIndex = 0;
         for(int i=0; i<a.length; i++){
             newIndex = i+k;
@@ -16,7 +16,7 @@ public class RotateArraybyKPositions {
         }
         
         for(int val: temp){
-            System.out.print(val);
+            System.out.print(val +" ");
         }
         
            
