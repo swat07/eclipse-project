@@ -16,11 +16,13 @@ public class RearrangeCharactersSoThatTwoAdjacentCaracters {
 
 		//		s=3 , w=3, r=2, t=1 , e=1
 		//		swrteswrsw 
-		HashMap<Character,Integer> hm = convertStringTohashMap(s1); //This line builds a frequency map from the input string s1.hm stores each character as a key and how many times it appears as the value.
+		HashMap<Character,Integer> hm = convertStringTohashMap(s1); 
+//This line builds a frequency map from the input string s1.hm stores each character as a key and how many times it appears as the value.
 		hm = sortByValue(hm); //This sorts the map in descending order of character frequency using a helper method.A LinkedHashMap is returned to preserve the sorted order.
 		System.out.println(hm);
 		int val = 0;
-		for(char key : hm.keySet()) { //Purpose: To get the maximum frequency from the first character in the sorted map.Since it's sorted by value, the first key has the highest frequency.
+		for(char key : hm.keySet()) { 
+//Purpose: To get the maximum frequency from the first character in the sorted map.Since it's sorted by value, the first key has the highest frequency.
 			val = hm.get(key);
 			break;
 		}

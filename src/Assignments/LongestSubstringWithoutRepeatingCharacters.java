@@ -15,10 +15,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		for(int i=0; i<s1.length();i++) {
 			if (!arrList.contains(s1.charAt(i))){
 				arrList.add(s1.charAt(i));
-				
 			}
 			else {
-				
 				finalList.add(arrList);
 				arrList = new ArrayList<Character>();
 				arrList.add(s1.charAt(i));
