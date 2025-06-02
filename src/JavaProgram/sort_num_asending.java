@@ -10,9 +10,11 @@ public class sort_num_asending {
 		}
 		for(int j=0; j<arr.length; j++) {
 			for(int k=j+1; k<arr.length; k++) {
-				temp = arr[j];
-				arr[j] = arr[k];
-				arr[k] = temp;
+				if(arr[j] > arr[k]) {
+					temp = arr[j];
+					arr[j] = arr[k];
+					arr[k] = temp;
+				}
 				
 			}
 		}

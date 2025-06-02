@@ -1,6 +1,7 @@
 package JavaProgram;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Set;
 
 public class FirstNonReapting {
@@ -9,7 +10,7 @@ public class FirstNonReapting {
 		String a = "sswwaatjjkooo";
 		char a2[] = a.toCharArray();
 
-		HashMap<Character,Integer> hm = new HashMap<>();
+		LinkedHashMap<Character,Integer> hm = new LinkedHashMap<>();
 		for(Character ch : a2) {
 			if(hm.containsKey(ch)) {
 				hm.put(ch, hm.get(ch)+1);
@@ -25,6 +26,7 @@ public class FirstNonReapting {
 		for (char key : keys) {
 			if (hm.get(key) == 1) {
 				System.out.print(key + " ");
+				break;
 			}
 			
 		}
