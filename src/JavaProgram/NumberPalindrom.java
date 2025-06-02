@@ -14,7 +14,7 @@ public class NumberPalindrom {
 		while(num > 0) {
 			int rem = num % 10;
 			revNum = revNum * 10 + rem;
-			num = num / 10; 
+			num = num / 10;
 			
 		}
 		if(revNum == finalNum) {

@@ -4,28 +4,32 @@ public class ReverseStringPreservingSpacePositions {
 
     public static void main(String[] args) {
         String input = "Swati Malviya";
-        char[] inputArr = input.toCharArray();
-        char[] result = new char[inputArr.length];
+        char[] inputArray = input.toCharArray();
+        char[] result = new char[inputArray.length];
 
-        // Mark space positions
-        for (int i = 0; i < inputArr.length; i++) {
-            if (inputArr[i] == ' ') {
+        // Mark spaces in result
+        for (int i = 0; i < inputArray.length; i++) {
+            if (inputArray[i] == ' ') {
                 result[i] = ' ';
             }
         }
 
-        // Reverse the characters (skip spaces)
-        int j = inputArr.length - 1;
-        for (int i = 0; i < inputArr.length; i++) {
-            if (inputArr[i] != ' ') {
-                while (result[j] == ' ') {
+        // Traverse input string from beginning
+        // and put characters in result from end
+        int j = result.length - 1;
+        for (int i = 0; i < inputArray.length; i++) {
+
+            // Ignore spaces in input string232
+            if (inputArray[i] != ' ') {
+
+                // ignore spaces in result.
+                if (result[j] == ' ') {
                     j--;
                 }
-                result[j] = inputArr[i];
+                result[j] = inputArray[i];
                 j--;
             }
         }
-
-        System.out.println(new String(result));  // Output: "aivlya itawS"
+        System.out.println(String.valueOf(result));  // Output: "aivlya itawS"
     }
 }
