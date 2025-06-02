@@ -5,7 +5,7 @@ public class MergeTwoSortedArrays {
 	public static void main(String[] args) {
 		int a[] = {1,2,3,5,8};
 		int b[] = {2,4,7,8,10,14};
-		
+//o/p:-1 2 2 3 4 5 7 8 8 10 14 		
 		int arr[] = new int[a.length + b.length];
 		
 		for (int i=0; i<a.length ; i++) {
